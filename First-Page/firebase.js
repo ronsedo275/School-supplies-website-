@@ -5,27 +5,30 @@ const firebaseConfig = {
     projectId: "drivesupplies-22827",
     storageBucket: "drivesupplies-22827.appspot.com",
     messagingSenderId: "803695426395",
-    appId: "1:803695426395:web:e643f8ba5da9b00d48387e",
-    measurementId: "G-CN3K4H82TN"
-  };
+    appId: "1:803695426395:web:e643f8ba5da9b00d48387e"
+    // measurementId: "G-CN3K4H82TN"
+};
+
 //initize firebase 
   firebase.initializeApp(firebaseConfig);
 
   //reference your database
-  var driveSuppliesDB = firebase.database.ref('driveSupplies');
+  var drivesuppliesDB = firebase.database().ref("drivesupplies");
 
-  document.getElementById('teacher').addEventListener('submit', submitForm);
+  document.getElementById("teacher").addEventListener("submit", submitForm);
 
 
   function submitForm(e) {
     e.preventDefault();
 
-    var name = getElementVal('userId');
-    var email = getElementVal('emailAddress');
-    var password = getElementVal('password');
-    var schoolorgainzation = getElementVal('schoolOrgainzation');
+    var name = getElementVal("name");
+    var email = getElementVal("email");
+    var password = getElementVal("password");
+    var school = getElementVal("school");
+
+    console.log(name, email, password, school);
   }
 
-  const getElementById = (id) => {
+  const getElementVal = (id) => {
     return document.getElementById(id).value;
-  }
+}

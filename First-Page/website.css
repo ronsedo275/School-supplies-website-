@@ -288,6 +288,8 @@ nav ul li a {
     margin: 0 12px;
     box-shadow: 4px 4px 20px 3px #7f7f7f3d;
     cursor: pointer;
+    color: #000;
+    font-weight: 900;
 }
 .input-group {
     top: 200px;
