@@ -48,9 +48,10 @@
                 <img src="https://bit.ly/456gU5j" alt="snap">
             </div>
             <form id="teacher" class="input-group">
-                <input type="text" class="input-field" placeholder="User Id" required>
-                <input type="email" class="input-field" placeholder="Email Address" required>
-                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="text" class="input-field" id="userId" placeholder="User Id" required>
+                <input type="email" class="input-field" id="emailAddress" placeholder="Email Address" required>
+                <input type="password" class="input-field" id="password" placeholder="Enter Password" required>
+
                 <div class="select-menu" required>
                     <div class="select-btn">
                         <img src="https://bit.ly/3YBs8fI" alt="">
@@ -58,7 +59,6 @@
                         <span class="Btn-txt">Select Your type of school</span>
                         <i class='bx bx-chevron-down'></i>
                     </div>
-                    
                     <ul class="options">
                         <li class="option">
                             <i class='bx bxl-github' style="color: #171515;"></i>
@@ -81,32 +81,36 @@
                             <span class="option-txt">Twitter</span>
                         </li>
                     </ul>
-
                 </div>
-                <input type="password" class="input-field" placeholder="School or Organization" required>
+
+                <input type="text" class="input-field" id="schoolOrgainzation" placeholder="School or Organization" required>
                 <input type="checkbox" class="check-box"><span>I agree to the terms & conditions.</span>
                 <button type="submit" class="submit-btn" onclick="togglePopup()"><a href="twopart.html">Register</a></button>
                 <span class="span">Already have an account? <a class="a" href="">Login</a></span>
             </form>
+            
             <form id="parents" class="input-group">
-                <input type="text" class="input-field" placeholder="User Id" required>
-                <input type="email" class="input-field" placeholder="Email Id" required>
-                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="text" class="input-field" id="userId" placeholder="User Id" required>
+                <input type="email" class="input-field" id="emailAddress" placeholder="Email Address" required>
+                <input type="password" class="input-field" id="password" placeholder="Enter Password" required>
                 <input type="checkbox" class="check-box"><span>I agree to the terms & conditions.</span>
                 <button type="submit" class="submit-btn" onclick="togglePopup()"><a href="twopart.html">Register</a></button>
                 <span class="span" >Already have an account? <a class="a" href="">Login</a></span>
             </form>
+
             <form id="donor" class="input-group">
-                <input type="text" class="input-field" placeholder="User Id" required>
-                <input type="email" class="input-field" placeholder="Email Address" required>
-                <input type="password" class="input-field" placeholder="Enter Password" required>
-                <input type="text" class="input-field" placeholder="Name of Organization" required>
+                <input type="text" class="input-field" id="userId" placeholder="User Id" required>
+                <input type="email" class="input-field" id="emailAddress" placeholder="Email Address" required>
+                <input type="password" class="input-field" id="password" placeholder="Enter Password" required>
+                <input type="text" class="input-field" id="schoolOrgainzation" placeholder="Name of Organization" required>
                 <input type="checkbox" class="check-box"><span>I agree to the tearms & conditions.</span>
                 <button type="submit" class="submit-btn" onclick="togglePopup()"><a href="twopart.html">Register</a></button>
                 <span class="span">Already have an account? <a class="a" href="">Login</a></span>
             </form>
+
         </div> 
     </div>
+
     <div class="downloandapp">
 
         <!-- <div class="div">
@@ -237,8 +241,8 @@
 
 
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="firebase.js"></script>
     <script src="popup.js"></script>
     <script src="firbase.js"></script>
     <script src="loginmenu.js"></script>
