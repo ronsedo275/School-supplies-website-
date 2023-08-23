@@ -279,20 +279,8 @@ nav ul li a {
     border-radius: 30px;
     transition: .5s ease;
 }
-.social-icons {
-    margin: 30px auto;
-    text-align: center;
-}
-.social-icons img {
-    width: 30px;
-    margin: 0 12px;
-    box-shadow: 4px 4px 20px 3px #7f7f7f3d;
-    cursor: pointer;
-    color: #000;
-    font-weight: 900;
-}
 .input-group {
-    top: 200px;
+    top: 130px;
     margin-left: 20px;
     position: absolute;
     width: 340px;

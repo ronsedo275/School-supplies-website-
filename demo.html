@@ -1,0 +1,79 @@
+<table>
+    <thead>
+        <th>Sno</th>
+        <th>address</th>
+        <th>date</th>
+        <th>description</th>
+        <th>name</th>
+        <th>time</th>
+        <th>url</th>
+    </thead>
+    <tbody id="tbody1">
+    </tbody>
+</table>
+
+<script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js"></script>
+
+
+<script id="MainScript">
+  
+    var firebaseConfig = {
+      apiKey: "AIzaSyCPGsLl1g-DIIiN43cBEa3c3CAA3ROHxfI",
+      authDomain: "website-85d54.firebaseapp.com",
+      databaseURL: "https://website-85d54-default-rtdb.firebaseio.com",
+      projectId: "website-85d54",
+      storageBucket: "website-85d54.appspot.com",
+      messagingSenderId: "698232714533",
+      appId: "1:698232714533:web:7a2fe867025fa9584096cc"
+    };
+    firbase.initializeApp(firebaseConfig);
+
+    function SelectAllData(){
+        firebase.database().ref('drives').once('value',
+        function(AllRecords){
+            AllRecords.forEach(
+                function(CurrentRecord){
+                    var address = CurrentRecord.val().address;
+                    var date = CurrentRecord.val().date;
+                    var descrip = CurrentRecord.val().description;
+                    var name = CurrentRecord.val().name;
+                    var time = CurrentRecord.val().time;
+                    var url = CurrentRecord.val().url;
+                    AddItemsToTable(address,date,descrip,name,time,url);
+                }
+            );
+        });
+    }
+
+    window.onload = SelectAllData;
+
+    var stdNo = 0;
+    function AddItemsToTable(address,date,descrip,name,time,url){
+        var tbody = document.getElementById('tbody1');
+        var trow = document.createElement('tr');
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+        var td3 = document.createElement('td');
+        var td4 = document.createElement('td');
+        var td5 = document.createElement('td');
+        var td6 = document.createElement('td');
+        var td7 = document.createElement('td');
+        td1.innerHTML = ++stdNo;
+        td2.innerHTML = address;
+        td3.innerHTML = date;
+        td4.innerHTML = descrip;
+        td5.innerHTML = name;
+        td6.innerHTML = time;
+        td7.innerHTML = url;
+        trow.appendChild(td1);
+        trow.appendChild(td2);
+        trow.appendChild(td3);
+        trow.appendChild(td4);
+        trow.appendChild(td5);
+        trow.appendChild(td6);
+        trow.appendChild(td7);
+        tbody.appendChild(trow);
+    }
+  </script>

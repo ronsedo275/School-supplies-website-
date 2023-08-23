@@ -23,13 +23,34 @@
     --time-03: all 0.3s linear;
     --time-02: all 0.2s linear;
 }
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #36669c;
+}
+body.dark::-webkit-scrollbar{
+    width: 6px;
+    border-radius: 40px;
+}
+body.dark::-webkit-scrollbar-track{
+    background-color: #6e6d6d;
+    border-radius: 40px;
+
+}
+body.dark::-webkit-scrollbar-thumb{
+    border-radius: 40px;
+    background-color: #fff;
+}
 body{
     width: 100px;
     min-height: 100vh;
     background-color: var(--dash-color);
     overflow-x: hidden;
 }
-
 body.dark {
     --primary-color: #3a3b3c;
     --nav-color: #181919;
@@ -45,7 +66,6 @@ body.dark {
     --box3-color: #3a3b3c;
     --title-icon-color: #ddd;
 }
-
 nav{
     position: fixed;
     top: 0;
@@ -118,7 +138,7 @@ nav.close .menu-items li a ion-icon{
     padding-left: 12px;
     font-size: 34px;
 }
-nav .menu-items li a .links{
+nav .menu-items li a .links {
     font-size: 18px;
     color: var(--white);
     transition: .3s ease;
@@ -126,10 +146,10 @@ nav .menu-items li a .links{
 nav.close .menu-items li a .links {
     opacity: 0;
 }
-nav .menu-items li.active a{
+nav .menu-items li.active a {
     background-color: var(--dash-color);
 }
-nav .menu-items li.active a:before{
+nav .menu-items li.active a:before {
     content: '';
     position: absolute;
     width: 40px;
@@ -139,7 +159,7 @@ nav .menu-items li.active a:before{
     border-radius: 50%;
     box-shadow: 20px 20px var(--dash-color);
 }
-nav .menu-items li.active a:after{
+nav .menu-items li.active a:after {
     content: '';
     position: absolute;
     width: 40px;
@@ -148,19 +168,24 @@ nav .menu-items li.active a:after{
     bottom: -40px;
     border-radius: 50%;
     box-shadow: 20px -20px var(--dash-color);
+    pointer-events: none;
 }
-nav .menu-items li.active a .links{
+nav .menu-items li.active a .links {
     color: var(--primary-color);
 }
-
-
-nav .menu-items li.active a ion-icon{
+body.dark nav .menu-items li.active a .links,
+body.dark nav .menu-items li a .links,
+body.dark nav .menu-items li a ion-icon,
+body.dark nav .menu-items li.active a ion-icon {
+    color: #fff;
+}
+nav .menu-items li.active a ion-icon {
     color: var(--primary-color);
 }
-nav .menu-items .mode{
+nav .menu-items .mode {
     display: flex;
 }
-.menu-items .darkToggle{
+.menu-items .darkToggle {
     position: absolute;
     right: 15px;
     width: 45px;
@@ -169,7 +194,7 @@ nav .menu-items .mode{
     justify-content: center;
     align-items: center;
 }
-.darkToggle .switch{
+.darkToggle .switch {
     position: relative;
     display: inline-block;
     height: 22px;
@@ -177,7 +202,7 @@ nav .menu-items .mode{
     border-radius: 25px;
     background-color: var(--toggle-color);
 }
-.darkToggle .switch:before{
+.darkToggle .switch:before {
     content: '';
     position: absolute;
     left: 5px;
@@ -189,11 +214,16 @@ nav .menu-items .mode{
     background-color: #36669c;
     transition: .3s ease;
 }
+body.dark .darkToggle .switch:before{
+    background-color: #262629;
 
+}
 body.dark .switch::before {
     left: 20px;
 }
-
+section.delete {
+    opacity: 0;
+}
 .drives{
     position: relative;
     left: 250px;
@@ -254,6 +284,11 @@ nav.close ~ .drives .top{
     border: none;
     background-color: var(--dash-color);
 }
+
+body.dark .top .searchBox input {
+    color: #fff;
+}
+
 .top .searchBox input:focus{
     outline: none;
     font-size: 17px;

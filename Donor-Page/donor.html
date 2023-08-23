@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X--UA-Compatible"  content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Donors Link</title>
+    <link rel="stylesheet" href="donor.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <div class="logo-image">
+                <img src="https://bit.ly/3E2uE5q" alt="">
+            </div>
+            
+            <div class="logo-name">
+                Lisedo Villa
+            </div>
+        </div>
+        <div class="menu-items">
+            <ul class="navLinks">
+                <li class="navList">
+                    <a onclick="drives()">
+                        <ion-icon class="ion-icon" name="home-outline"></ion-icon>
+                        <span id="names" class="links">Drives</span>
+                    </a>
+                </li>
+
+                <li class="navList">
+                    <a onclick="cheap()">
+                        <ion-icon name="school-outline"></ion-icon>
+                        <span id="suplies" class="links">Cheap School Supplies</span>
+                    </a>
+                </li>
+
+                <li class="navList">
+                    <a onclick="maps()">
+                        <ion-icon name="map-outline"></ion-icon>
+                        <span id="map" class="links">Maps</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="bottom-link">
+                <li>
+                    <a target="_blank" href="/First-Page/website.html">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span class="links">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <a href="#">
+                        <ion-icon name="moon-outline"></ion-icon>
+                        <span class="links">Dark Mode</span>
+                        <div class="darkToggle">
+                            <span class="switch"></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <section class="drives">
+        <div class="top">
+            <ion-icon class="navToggle" name="menu-outline"></ion-icon>
+            <div class="searchBox">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" placeholder="Search">
+            </div>
+            <img src="https://bit.ly/3R1ZS4r" alt="">
+        </div>
+
+        <div class="drivesbelow">
+            <div class="drivestxt">
+                <h1 class="opport">
+                    Opportunities
+                </h1>
+
+                <div class="results">
+                    216 Results
+                </div>
+            </div>
+
+            <div class="suggestion">
+                <a class="suggest" href="#suggestion-modal" role="button">
+                    Suggest an Opportunity</a>
+            </div>
+
+            <div class="mapncalendar">
+                <ion-icon class="icon" name="map-outline"></ion-icon>
+                <a class="map" href="#"><i class="fi-map"></i> Map</a>
+                <ion-icon class="icon" name="calendar-outline"></ion-icon>
+                <a class="calendar" href="#"><i class="fi-calendar"></i> Calendar</a>
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="recentDrives">
+                <div class="cardHeader">
+                    <h2>Drives List</h2>
+                    <a href="#" class="btn">View All</a>
+                </div>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                        <td>Address</td>  
+                        <td>Description</td>
+                        <td>URL</td>
+                    </tr>
+                    </thead>
+
+                    <tbody id="tbody1">
+                        <tr>
+                            <td>Name#1</td>
+                            <td>Date#1</td>
+                            <td>Time#1</td>
+                            <td>Address#1</td>
+                            <td>Description#1</td>
+                            <td>URL#1</td>
+                        </tr>
+                    </tbody>
+                </table>                
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="maps">
+        <div class="top">
+            <ion-icon class="navToggle" name="menu-outline"></ion-icon>
+            <div class="searchBox">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" placeholder="Search">
+            </div>
+            <img src="https://bit.ly/3R1ZS4r" alt="">
+        </div>
+
+        <div class="mapsbelow">
+            <div class="mapstxt">
+                <h1 class="opport">
+                    Opportunities
+                </h1>
+
+                <div class="results">
+                    216 Results
+                </div>
+            </div>
+
+            <div class="suggestion">
+                <a class="suggest" href="#suggestion-modal" role="button">
+                    Suggest an Opportunity</a>
+            </div>
+
+            <div class="mapscalendar">
+                <ion-icon class="icon" name="maps-outline"></ion-icon>
+                <a class="maps" href="#"><i class="fi-map"></i> Map</a>
+                <ion-icon class="icon" name="calendar-outline"></ion-icon>
+                <a class="calendar" href="#"><i class="fi-calendar"></i> Calendar</a>
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="recentmaps">
+                <div class="cardHeader">
+                    <h2>map List</h2>
+                    <a href="#" class="btn">View All</a>
+                </div>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                        <td>Address</td>  
+                        <td>Description</td>
+                        <td>URL</td>
+                    </tr>
+                    </thead>
+
+                    <tbody id="tbody1">
+                        <tr>
+                            <td>Name#1</td>
+                            <td>Date#1</td>
+                            <td>Time#1</td>
+                            <td>Address#1</td>
+                            <td>Description#1</td>
+                            <td>URL#1</td>
+                        </tr>
+                    </tbody>
+                </table>                
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="supplies">
+        <div class="top">
+            <ion-icon class="navToggle" name="menu-outline"></ion-icon>
+            <div class="searchBox">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" placeholder="Search">
+            </div>
+            <img src="https://bit.ly/3R1ZS4r" alt="">
+        </div>
+
+        <div class="suppliesbelow">
+            <div class="suppliestxt">
+                <h1 class="opport">
+                    Opportunities
+                </h1>
+
+                <div class="results">
+                    216 Results
+                </div>
+            </div>
+
+            <div class="suggestion">
+                <a class="suggest" href="#suggestion-modal" role="button">
+                    Suggest an Opportunity</a>
+            </div>
+
+            <div class="suppliescalendar">
+                <ion-icon class="icon" name="map-outline"></ion-icon>
+                <a class="map" href="#"><i class="fi-map"></i> Map</a>
+                <ion-icon class="icon" name="calendar-outline"></ion-icon>
+                <a class="calendar" href="#"><i class="fi-calendar"></i> Calendar</a>
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="recentsupplies">
+                <div class="cardHeader">
+                    <h2>supplies List</h2>
+                    <a href="#" class="btn">View All</a>
+                </div>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                        <td>Address</td>  
+                        <td>Description</td>
+                        <td>URL</td>
+                    </tr>
+                    </thead>
+
+                    <tbody id="tbody1">
+                        <tr>
+                            <td>Name#1</td>
+                            <td>Date#1</td>
+                            <td>Time#1</td>
+                            <td>Address#1</td>
+                            <td>Description#1</td>
+                            <td>URL#1</td>
+                        </tr>
+                    </tbody>
+                </table>                
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script src="navLinksmove.js"></script>
+    <script src="navmove.js"></script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
