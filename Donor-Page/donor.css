@@ -23,14 +23,15 @@
     --time-03: all 0.3s linear;
     --time-02: all 0.2s linear;
 }
-::-webkit-scrollbar{
-    width: 6px;
+*::-webkit-scrollbar{
+    width: 20px;
 }
-::-webkit-scrollbar-thumb{
-    background-color: #ccc;
+*::-webkit-scrollbar-track{
+    background-color: #fff;
 }
-::-webkit-scrollbar-thumb{
-    background-color: #36669c;
+*::-webkit-scrollbar-thumb{
+    background-color: #0b5b74;
+    border-radius: 50px;
 }
 body.dark::-webkit-scrollbar{
     width: 6px;
@@ -102,6 +103,7 @@ nav .logo .logo-name{
     margin-left: 14px;
     white-space: none;
     transition: .3s ease;
+
 }
 nav.close .logo .logo-name {
     opacity: 0;
@@ -220,17 +222,7 @@ body.dark .darkToggle .switch:before{
 body.dark .switch::before {
     left: 20px;
 }
-section.delete {
-    opacity: 0;
-}
-
-
-
 .drives{
-
-    opacity: 0;
-
-
     position: relative;
     left: 250px;
     width: calc(100% + 770px);
@@ -290,9 +282,11 @@ nav.close ~ .drives .top{
     border: none;
     background-color: var(--dash-color);
 }
+
 body.dark .top .searchBox input {
     color: #fff;
 }
+
 .top .searchBox input:focus{
     outline: none;
     font-size: 17px;
@@ -332,6 +326,125 @@ body.dark .top .searchBox input {
     border-radius: 10px;
     font-weight: 800;
     color: #000;
+}
+
+
+
+
+input[type="checkbox"]{
+    display: none;
+}
+#show:checked ~ .pplsugg {
+    display: block;
+}
+.pplsugg {
+    display: none;
+    background: #262629;
+    width: 630px;
+    padding: 50px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.pplsugg{
+    position: absolute;
+    top: 60px;
+    left: 580px;
+    transform: translate(-1%, -1%);
+    z-index: 2;
+    background: rgb(16, 169, 169);
+}
+.pplsugg h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+.pplsugg form{
+    margin-top: -24px;
+}
+.pplsugg form .data{
+    height: 45px;
+    width: 100%;
+    margin: 40px 0;
+}
+form .data label{
+    font-size: 20px;
+}
+form .data input{
+    height: 100%;
+    width: 100%;
+    margin-top: 4px;
+    padding-left: 10px;
+    font-size: 20px;
+    border: 1px solid silver;
+}
+form .data input:focus{
+    border: none;
+    outline: none;
+    border-color: #3498db;
+    border-bottom-width: 4px;
+}
+form .butn{
+    margin: 50px 0;
+    height: 55px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+form .butn .inner{
+    height: 200%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    z-index: -1;
+    background: -webkit-linear-gradient(right, #56d8e4, #12a299, #56d8e4, #0a7188);
+    transition: all 0.6s ease;
+}
+form .butn:hover .inner{
+    left: 0;
+}
+form .butn button{
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+} 
+.pplsugg .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.close-btn:hover{
+    color: #127fc8;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.maps{
+    display: none;
 }
 .mapncalendar .map,
 .mapncalendar .calendar {
@@ -412,400 +525,6 @@ body.dark .top .searchBox input {
 }
 .details .recentDrives table tr td:nth-child(3),
 .details .recentDrives table .names td:nth-child(3){
-    text-align: end;
-    text-align: center;
-}
-
-
-
-
-
-
-.maps{
-
-    opacity: 0;
-
-    top: -1941px;
-    position: relative;
-    left: 250px;
-    width: calc(100% + 770px);
-    min-height: 200vh;
-    background-color: var(--dash-color);
-    padding: 10px 15px;
-    transition: .5s ease;
-}
-nav.close ~ .maps{
-    width: calc(100% + 790px);
-    left: 72px;
-}
-nav.close ~ .maps .top{
-    width: calc(100% + 790px);
-}
-.maps .top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    left: 250px;
-    padding: 10px 15px;
-    width: calc(100% + 770px);
-    transition: .4s ease;
-}
-nav.close ~ .maps .top{
-    width: calc(100% + 900px);
-}
-.maps .top .navToggle{
-    font-size: 25px;
-    color: var(--text-color);
-    cursor: pointer;
-}
-.top img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-.maps .top .searchBox {
-    position: relative;
-    height: 45px;
-    border: 1px solid var(--border-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    padding: 0 10px;
-    width: 600px;
-}
-.maps .top .searchBox:focus-within{
-    border-color: #0ff9;
-    box-shadow: 0 0 5px #36669c;
-}
-.top .searchBox input{
-    width: 100%;
-    height: 100%;
-    font-size: 15px;
-    border: none;
-    background-color: var(--dash-color);
-}
-body.dark .top .searchBox input {
-    color: #fff;
-}
-.top .searchBox input:focus{
-    outline: none;
-    font-size: 17px;
-}
-.top .searchBox ion-icon{
-    font-size: 22px;
-    color: var(--text-color-light);
-    padding: 0 20px;
-}
-.mapsbelow {
-    width: calc(100% + 740px);
-}
-.mapsbelow,
-.mapstxt {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 13px;
-}
-.mapstxt .opport {
-    font-size: 30px;
-}
-.mapstxt .results {
-    font-size: 12px;
-    margin-left: 20px;
-    border: none;
-    background: #efecf3;
-    border-radius: 100px;
-    padding: 10px;
-    color: #666276;
-    font-weight: 600;
-    position: relative;
-}
-.suggestion .suggest {
-    background: #5c9ee9;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: 800;
-    color: #000;
-}
-.mapncalendar .map,
-.mapncalendar .calendar {
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-}
-.details {
-    position: relative;
-    width: 170%;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 30px;
-    margin-top: 10px;
-    transition: .2s ease;
-}
-.details .recentmaps {
-    position: relative;
-    display: grid;
-    min-height: 700px;
-    background: var(--white);
-    padding: 20px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0,0.1);
-    border-radius: 20px;
-}
-.cardHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.cardHeader h2{
-    font-size: 38px;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-.btn {
-    position: relative;
-    padding: 5px 10px;
-    background: var(--nav-color);
-    text-decoration: none;
-    color: var(--white);
-    border-radius: 6px;
-    font-size: 23px;
-}
-.details table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 40px;
-}
-.details table thead td {
-    font-weight: 600;
-}
-.details .recentmaps table tr,
-.details .recentmaps table .names
- {
-    font-size: 20px;
-    color: var(--text-color);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
-}
-.details .recentmaps table tr:last-child,
-.details .recentmaps table .names:last-child {
-    border-bottom: none;
-}
-.details .recentmaps table tbody tr:hover,
-.details .recentmaps table tbody .names:hover {
-    background: #5c9ee9;
-    color: var(--white);
-    cursor: pointer;
-}
-.details .recentmaps table tr td,
-.details .recentmaps table .names td {
-    padding: 12px;
-}
-.details .recentmaps table tr td:nth-child(2),
-.details .recentmaps table .names td:nth-child(2){
-    text-align: end;
-}
-.details .recentmaps table tr td:nth-child(3),
-.details .recentmaps table .names td:nth-child(3){
-    text-align: end;
-    text-align: center;
-}
-
-
-
-
-
-
-
-
-
-.supplies{
-
-    opacity: 0;
-
-    top: -1941px;
-    position: relative;
-    left: 250px;
-    width: calc(100% + 770px);
-    min-height: 200vh;
-    background-color: var(--dash-color);
-    padding: 10px 15px;
-    transition: .5s ease;
-}
-nav.close ~ .supplies{
-    width: calc(100% + 790px);
-    left: 72px;
-}
-nav.close ~ .supplies .top{
-    width: calc(100% + 790px);
-}
-.supplies .top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    left: 250px;
-    padding: 10px 15px;
-    width: calc(100% + 770px);
-    transition: .4s ease;
-}
-nav.close ~ .supplies .top{
-    width: calc(100% + 900px);
-}
-.supplies .top .navToggle{
-    font-size: 25px;
-    color: var(--text-color);
-    cursor: pointer;
-}
-.top img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-.supplies .top .searchBox {
-    position: relative;
-    height: 45px;
-    border: 1px solid var(--border-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    padding: 0 10px;
-    width: 600px;
-}
-.supplies .top .searchBox:focus-within{
-    border-color: #0ff9;
-    box-shadow: 0 0 5px #36669c;
-}
-.top .searchBox input{
-    width: 100%;
-    height: 100%;
-    font-size: 15px;
-    border: none;
-    background-color: var(--dash-color);
-}
-
-body.dark .top .searchBox input {
-    color: #fff;
-}
-.top .searchBox input:focus{
-    outline: none;
-    font-size: 17px;
-}
-.top .searchBox ion-icon{
-    font-size: 22px;
-    color: var(--text-color-light);
-    padding: 0 20px;
-}
-.suppliesbelow {
-    width: calc(100% + 740px);
-}
-.suppliesbelow,
-.suppliestxt {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 13px;
-}
-.suppliestxt .opport {
-    font-size: 30px;
-}
-.suppliestxt .results {
-    font-size: 12px;
-    margin-left: 20px;
-    border: none;
-    background: #efecf3;
-    border-radius: 100px;
-    padding: 10px;
-    color: #666276;
-    font-weight: 600;
-    position: relative;
-}
-.suggestion .suggest {
-    background: #5c9ee9;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: 800;
-    color: #000;
-}
-.mapncalendar .map,
-.mapncalendar .calendar {
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-}
-.details {
-    position: relative;
-    width: 170%;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 30px;
-    margin-top: 10px;
-    transition: .2s ease;
-}
-.details .recentsupplies {
-    position: relative;
-    display: grid;
-    min-height: 700px;
-    background: var(--white);
-    padding: 20px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0,0.1);
-    border-radius: 20px;
-}
-.cardHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.cardHeader h2{
-    font-size: 38px;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-.btn {
-    position: relative;
-    padding: 5px 10px;
-    background: var(--nav-color);
-    text-decoration: none;
-    color: var(--white);
-    border-radius: 6px;
-    font-size: 23px;
-}
-.details table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 40px;
-}
-.details table thead td {
-    font-weight: 600;
-}
-.details .recentsupplies table tr,
-.details .recentsupplies table .names
- {
-    font-size: 20px;
-    color: var(--text-color);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
-}
-.details .recentsupplies table tr:last-child,
-.details .recentsupplies table .names:last-child {
-    border-bottom: none;
-}
-.details .recentsupplies table tbody tr:hover,
-.details .recentsupplies table tbody .names:hover {
-    background: #5c9ee9;
-    color: var(--white);
-    cursor: pointer;
-}
-.details .recentsupplies table tr td,
-.details .recentsupplies table .names td {
-    padding: 12px;
-}
-.details .recentsupplies table tr td:nth-child(2),
-.details .recentsupplies table .names td:nth-child(2){
-    text-align: end;
-}
-.details .recentsupplies table tr td:nth-child(3),
-.details .recentsupplies table .names td:nth-child(3){
     text-align: end;
     text-align: center;
 }
