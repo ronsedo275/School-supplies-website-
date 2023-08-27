@@ -28,18 +28,16 @@
                         <span id="names" class="links">Drives</span>
                     </a>
                 </li>
-
                 <li class="navList">
-                    <a>
+                    <a href="http://127.0.0.1:5500/Donor-Page/Supplies-Page/suppliies.html">
                         <ion-icon name="school-outline"></ion-icon>
                         <span id="suplies" class="links">Teachers Discounts</span>
                     </a>
                 </li>
-
                 <li class="navList">
                     <a>
-                        <ion-icon name="map-outline"></ion-icon>
-                        <span id="map" class="links">Maps</span>
+                        <ion-icon name="albums-outline"></ion-icon>
+                        <span id="map" class="links">Teachers Requests</span>
                     </a>
                 </li>
             </ul>
@@ -90,7 +88,7 @@
                     
                 <div class="pplsugg">
                     <label for="show" class="close-btn" title="close">&times;</label>
-                    <h1>Suggest A Drive</h1>
+                    <h1>Add A Drive</h1>
                     <form action="#">
                         <div class="data">
                             <label>Name Of Drive:</label>
@@ -114,7 +112,7 @@
                         </div>
                         <div class="data">
                             <label>URL Of Drive:</label>
-                            <input type="text">
+                            <input placeholder="Shorten Link" type="text">
                         </div>
                         <div class="butn">
                             <div class="inner"></div>
@@ -316,13 +314,107 @@
 
 
 
+    <script type="module">
+        // fill table function to add one record to the table
+        var stdNo = 0;
+        var tbody = document.getElementById('tbody1')
+        function AddItemToTable(Name, Date, Time, Address, Description, Url) {
+            let trow = document.createElement('tr');
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+            let td4 = document.createElement('td');
+            let td5 = document.createElement('td');
+            let td6 = document.createElement('td');
+            let td7 = document.createElement('td');
 
 
+            td1.innerHTML = ++stdNo;
+            td2.innerHTML = Name;
+            td3.innerHTML = Date;
+            td4.innerHTML = Time;
+            td5.innerHTML = Address;
+            td6.innerHTML = Description;
+            td7.innerHTML = Url;
 
-    
+
+            trow.appendChild(td1);
+            trow.appendChild(td2);
+            trow.appendChild(td3);
+            trow.appendChild(td4);
+            trow.appendChild(td5);
+            trow.appendChild(td6);
+            trow.appendChild(td7);
+
+            tbody.appendChild(trow);
+        }
+
+        function AddAllItemsToTable(DrivesNames) {
+            stdNo = 0;
+            tbody.innerHTML = "";
+            DrivesNames.forEach(element => {
+                AddItemToTable(element.Name, element.Date, element.Time, element.Address, element.Description, element.Url);
+            });
+        }
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDHZqASTuxcHdrxHQQVwUPjfKNWLxkbhkA",
+            authDomain: "schoolsuppliesdrives.firebaseapp.com",
+            databaseURL: "https://schoolsuppliesdrives-default-rtdb.firebaseio.com",
+            projectId: "schoolsuppliesdrives",
+            storageBucket: "schoolsuppliesdrives.appspot.com",
+            messagingSenderId: "955230591270",
+            appId: "1:955230591270:web:c2abd32f0097060a8fc9e7"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        import{ getDatabase, ref, child, onValue, get }
+            from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js"
+
+            // firebase.initializeApp(firebaseConfig);
+            // const db = firebase.database();
+
+        const db = getDatabase();
+
+        //--get all data--\\
+
+        function GetAllDataOnce() {
+            const dbRef = ref(db);
+
+            get(child(dbRef, "DrivesNames"))
+                .then((snapshot) => {
+                    var drives = [];
+
+                    snapshot.forEach(childSnapShot => {
+                        drives.push(childSnapShot.val());
+                    });
+                    AddAllItemsToTable(drives);
+                });
+        }
+
+    //--get realdata--\\
+        function GetAllDataRealtime() {
+            const dbRef = ref(db, "DrivesNames");
+
+            onValue(dbRef, (snapshot) => {
+                var drives = [];
+
+                 snapshot.forEach(childSnapShot => {
+                    drives.push(childSnapShot.val());
+                 });
+                AddAllItemsToTable(drives);
+
+            })
+        }
+
+        window.onload = GetAllDataRealtime;
+    </script>
     <script src="navLinksmove.js"></script>
     <script src="navmove.js"></script>
-    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
