@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X--UA-Compatible"  content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="supplies.css">
+    <title>Supplies Page</title>
+</head>
+<body>
+
+
+    <nav>
+        <div class="logo">
+            <div class="logo-image">
+                <img src="https://bit.ly/3E2uE5q" alt="">
+            </div>
+            
+            <div class="logo-name">
+                Lisedo Villa
+            </div>
+        </div>
+        <div class="menu-items">
+            <ul class="navLinks">
+                <li class="navList">
+                    <a>
+                        <ion-icon class="ion-icon" name="home-outline"></ion-icon>
+                        <span class="links">Drives</span>
+                    </a>
+                </li>
+
+                <li class="navList">
+                    <a>
+                        <ion-icon name="school-outline"></ion-icon>
+                        <span class="links">Teachers Discounts</span>
+                    </a>
+                </li>
+
+                <li class="navList">
+                    <a>
+                        <ion-icon name="map-outline"></ion-icon>
+                        <span class="links">Map</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="bottom-link">
+                <li>
+                    <a target="_blank" href="/First-Page/website.html">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span class="links">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <a href="#">
+                        <ion-icon name="moon-outline"></ion-icon>
+                        <span class="links">Dark Mode</span>
+                        <div class="darkToggle">
+                            <span class="switch"></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav> 
+
+
+<div class="main">
+    <div class="main-header">
+        <h1><span>Teachers Discounts</span></h1>
+        <div class="search">
+            <input type="text" id="search-item" placeholder="Search A Store....." onkeyup="search()">
+            <button class="btn-search"><i class='bx bx-search-alt-2'></i></button>
+        </div>
+    </div>
+    <div class="wrapper" id="wrapper">
+
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img class="bandnobles" src="https://bit.ly/3KSmQ9V" alt="">
+            </div>
+            <div class="card-center">
+                <h3>Barnes & Noble</h3>
+                <p class="card-detail">Barnes & Noble offers educators a year-round 20% discount on all purchases for classroom use through the Barnes & Noble Educator program.</p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon> CitiPlace, 2590 Citiplace Ct, Baton Rouge, LA 70808 (Varies With Location)</p>
+                <div class="card-sub">
+                    <p class="time"><ion-icon name="time-outline"></ion-icon>10 AM - 8 PM</p>
+                    <p><ion-icon name="pricetags-outline"></ion-icon>In-store Shopping</p>
+                </div>
+                <a class="card-url" target="_blank" href="https://www.barnesandnoble.com/"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+            <div class="card-right">
+                <div class="mapes">
+                    <a target="_blank" href="https://bit.ly/3KS3xhi"> <button class="btn">Google Map <br> Address</button> </a>
+                </div>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img class="odpic" src="https://bit.ly/3OUmz7R" alt="">
+            </div>
+            <div class="card-center">
+                <h3>Office Depot</h3>
+                <p class="card-detail">Join the Star Teacher program for 10% back in Rewards on ink, toner, and paper, 1% back in Rewards on nearly everything else</p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon> 3141 College Dr, Baton Rouge, LA 70808 (Varies With Location)</p>
+                <div class="card-sub">
+                    <p class="time"><ion-icon name="time-outline"></ion-icon> 8am - 9pm</p>
+                    <p><ion-icon name="pricetags-outline"></ion-icon> In-store shopping </p>
+                </div>
+                <a class="card-url" target="_blank" href="https://bit.ly/44nfuCw"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+            <div class="card-right">
+                <div class="mapes">
+                    <a target="_blank" href="https://bit.ly/3OSM610"> <button class="btn">Google Map <br> Address</button> </a>
+                </div>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img src="https://bit.ly/3QW8lpB" alt="">
+            </div>
+            <div class="card-center">
+                <h3>Staples</h3>
+                <p class="card-detail">With Staples Teacher Rewards, teachers earn 5% back for all purchases and 10% for teaching and art supplies. </p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon> Online </p>
+                <a class="card-url" target="_blank" href="https://www.staples.com/"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img src="https://bit.ly/3KWodEQ" alt="">
+            </div>
+            <div class="card-center">
+                <h3>JOANN</h3>
+                <p class="card-detail">Save 15% on all purchases at Joann's craft store when you enroll in their Joann teacher discount program.</p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon> 10545 S Mall Dr, Baton Rouge, LA 70809 (Varies With Location)</p>
+                <div class="card-sub">
+                    <p class="time"><ion-icon name="time-outline"></ion-icon> 9 AM - 9 PM</p>
+                    <p><ion-icon name="pricetags-outline"></ion-icon> In-store shopping · Online Shopping</p>
+                </div>
+                <a class="card-url" target="_blank" href="https://www.joann.com/"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+            <div class="card-right">
+                <div class="mapes">
+                    <a target="_blank" href="https://bit.ly/45vTFCc"> <button class="btn">Google Map <br> Address</button> </a>
+                </div>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img src="https://bit.ly/3suiPlZ" alt="">
+            </div>
+            <div class="card-center">
+                <h3>Lenovo</h3>
+                <p class="card-detail">Helps teachers and college students ave money on laptop and desktop computers — an extra 5% off.</p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon>Online</p>
+                <a class="card-url" target="_blank" href="https://bit.ly/3EwznN3"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img src="https://bit.ly/45snuU0" alt="">
+            </div>
+            <div class="card-center">
+                <h3> Microsoft</h3>
+                <p class="card-detail">Teachers and students can get Office 365 Education for FREE, which includes Word, Excel, PowerPoint and more. Educators also enjoy 10% off all Surface devices. </p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon>Online</p>
+                <a class="card-url" target="_blank" href="https://www.microsoft.com/en-us/"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img src="https://bit.ly/3sxBtcq" alt="">
+            </div>
+            <div class="card-center">
+                <h3>Pencils.com</h3>
+                <p class="card-detail">Offers a 10% discount on all orders for teachers, administrators and other school officials. </p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon>Online</p>
+                <a class="card-url" target="_blank" href="https://pencils.com/"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img src="https://bit.ly/44rBj3y" alt="">
+            </div>
+            <div class="card-center">
+                <h3>Half Price Books</h3>
+                <p class="card-detail">Half Price Books gives teachers 10% off year-round with its Educator Discount Card.</p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon>Online</p>
+                <a class="card-url" target="_blank" href="https://www.hpb.com/"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img src="https://bit.ly/45kHQyq" alt="">
+            </div>
+            <div class="card-center">
+                <h3>Costco WholeSale</h3>
+                <p class="card-detail">Teachers receive a $30 gift card when they purchase a Costco membership.</p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon> 3141 College Dr, Baton Rouge, LA 70808 (Varies With Location)</p>
+                <div class="card-sub">
+                    <p class="time"><ion-icon name="time-outline"></ion-icon>10 AM–8:30 PM</p>
+                    <p><ion-icon name="pricetags-outline"></ion-icon> In-store shopping · In-store pickup</p>
+                </div>
+                <a class="card-url" target="_blank" href="https://www.costco.com/"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+            <div class="card-right">
+                <div class="mapes">
+                    <a target="_blank" href="https://bit.ly/3YSAD6h"> <button class="btn">Google Map <br> Address</button> </a>
+                </div>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img src="https://bit.ly/3QVJRgm" alt="">
+            </div>
+            <div class="card-center">
+                <h3>Books-A-Million</h3>
+                <p class="card-detail">20% off for educators on in-store purchases, and various online discounts with the BAM Educator Card.</p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon> 325 Palace Dr, Hammond, LA 70403 (Varies With Location)</p>
+                <div class="card-sub">
+                    <p class="time"><ion-icon name="time-outline"></ion-icon>10 AM–8 PM</p>
+                    <p><ion-icon name="pricetags-outline"></ion-icon> In-store shopping</p>
+                </div>
+                <a class="card-url" target="_blank" href="http://www.booksamillion.com/"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+            <div class="card-right">
+                <div class="mapes">
+                    <a target="_blank" href="https://bit.ly/3qVoZLj"> <button class="btn">Google Map <br> Address</button> </a>
+                </div>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img src="https://bit.ly/45LQUvY" alt="">
+            </div>
+            <div class="card-center">
+                <h3>Target</h3>
+                <p class="card-detail">Teachers with an International Teacher ID Card (ITIC) have been eligible for up to 15% off their entire purchase.</p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon> 2001 Millerville Rd, Baton Rouge, LA 70816 (Varies With Location)</p>
+                <div class="card-sub">
+                    <p class="time"><ion-icon name="time-outline"></ion-icon> 8am - 10pm</p>
+                    <p><ion-icon name="pricetags-outline"></ion-icon> In-store shopping</p>
+                </div>
+                <a class="card-url" target="_blank" href="https://www.target.com/sl/baton-rouge-east/2089"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+            <div class="card-right">
+                <div class="mapes">
+                    <a target="_blank" href="https://bit.ly/3YNoqQp"> <button class="btn">Google Map <br> Address</button> </a>
+                </div>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left blue-bg">
+                <img class="michaels" src="https://bit.ly/3RcSp2z" alt="">
+            </div>
+            <div class="card-center">
+                <h3>Michaels</h3>
+                <p class="card-detail"> Sign up for Michael's Rewards online and verify your teacher ID. Then, you'll get 15% off automatically, in store and online!</p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon> 9616 Airline Hwy, Baton Rouge, LA 70815 (Varies With Location)</p>
+                <div class="card-sub">
+                    <p class="time"><ion-icon name="time-outline"></ion-icon>9 AM–9 PM</p>
+                    <p><ion-icon name="pricetags-outline"></ion-icon> In-store shopping · In-store pickup</p>
+                </div>
+                <a class="card-url" target="_blank" href="https://www.michaels.com/"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+            <div class="card-right">
+                <div class="mapes">
+                    <a target="_blank" href="https://bit.ly/3KWHzcM"> <button class="btn">Google Map <br> Address</button> </a>
+                </div>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-left llb">
+                <img src="https://bit.ly/3QYqGlQ" alt="">
+            </div>
+            <div class="card-center">
+                <h3>L.L.Bean</h3>
+                <p class="card-detail">Save 10% on select orders for teachers with code. To get the promo code, you must verify your eligibility via SheerID. </p>
+                <p class="card-loc"><ion-icon name="location-outline"></ion-icon> 3141 College Dr, Baton Rouge, LA 70808 (Varies With Location)</p>
+                <div class="card-sub">
+                    <p class="time"><ion-icon name="time-outline"></ion-icon> 8am - 10pm</p>
+                    <p><ion-icon name="pricetags-outline"></ion-icon> In-store shopping · In-store pickup</p>
+                </div>
+                <a class="card-url" target="_blank" href="https://bit.ly/44oIzx9"><ion-icon name="earth-outline"></ion-icon>Website URL</a>
+            </div>
+            <div class="card-right">
+                <div class="mapes">
+                    <a target="_blank" href="https://bit.ly/3QZp5MR"> <button class="btn">Google Map <br> Address</button> </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="navLinksmove.js"></script>
+    <script src="navmove.js"></script>
+    <script src="keyboardsearch.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+

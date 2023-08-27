@@ -222,6 +222,9 @@ body.dark .darkToggle .switch:before{
 body.dark .switch::before {
     left: 20px;
 }
+
+
+
 .drives{
     position: relative;
     left: 250px;
@@ -232,11 +235,8 @@ body.dark .switch::before {
     transition: .5s ease;
 }
 nav.close ~ .drives{
-    width: calc(100% + 790px);
+    width: calc(100% + 820px);
     left: 72px;
-}
-nav.close ~ .drives .top{
-    width: calc(100% + 790px);
 }
 .drives .top{
     display: flex;
@@ -454,7 +454,7 @@ form .butn button{
 }
 .details {
     position: relative;
-    width: 170%;
+    width: 270%;
     padding: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -490,6 +490,9 @@ form .butn button{
     border-radius: 6px;
     font-size: 23px;
 }
+
+
+
 .details table {
     width: 100%;
     border-collapse: collapse;
@@ -499,9 +502,9 @@ form .butn button{
     font-weight: 600;
 }
 .details .recentDrives table tr,
-.details .recentDrives table .names
- {
+.details .recentDrives table .names {
     font-size: 20px;
+    text-align: start;
     color: var(--text-color);
     border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
@@ -519,17 +522,20 @@ form .butn button{
 .details .recentDrives table .names td {
     padding: 12px;
 }
-.details .recentDrives table tr td:nth-child(2),
-.details .recentDrives table .names td:nth-child(2){
-    text-align: end;
+.details .recentDrives table tr td:nth-child(2) {
+    /* text-align: end; */
+    min-width: 2px;
 }
-.details .recentDrives table tr td:nth-child(3),
+.details .recentDrives table .names td:nth-child(2){
+    text-align: start;
+}
 .details .recentDrives table .names td:nth-child(3){
     text-align: end;
-    text-align: center;
+    /* text-align: center; */
 }
-
-
-.supplies{
-    display: none;
+.details .recentDrives table tr td:nth-child(3) {
+    width: 160px;
+}
+.details .recentDrives table tr td:nth-child(4) {
+    width: 130px;
 }
