@@ -37,9 +37,9 @@
                 </li>
 
                 <li class="navList">
-                    <a>
-                        <ion-icon name="map-outline"></ion-icon>
-                        <span class="links">Map</span>
+                    <a href="http://127.0.0.1:5500/Donor-Page/Teacher-Page/teachrequestss.html#teachrequst">
+                        <ion-icon name="albums-outline"></ion-icon>
+                        <span class="links">Teachers Requests</span>
                     </a>
                 </li>
             </ul>
@@ -73,7 +73,6 @@
             </div>
             <img src="https://bit.ly/3R1ZS4r" alt="">
         </div>
-
         <div class="drivesbelow">
             <div class="drivestxt">
                 <h1 class="opport">
@@ -95,45 +94,36 @@
                         <form action="#">
                             <div class="data">
                                 <label>Name Of Drive:</label>
-                                <input type="name">
+                                <input id="name" type="name">
                             </div>
                             <div class="data">
                                 <label>Date Of Drive:</label>
-                                <input type="date">
+                                <input id="date" type="date">
                             </div>
                             <div class="data">
                                 <label>Time Of Drive:</label>
-                                <input type="time">
+                                <input id="time" type="time">
                             </div>
                             <div class="data">
                                 <label>Address Of Drive:</label>
-                                <input type="text">
+                                <input id="address" type="text">
                             </div>
                             <div class="data">
                                 <label>Description Of Drive:</label>
-                                <input type="text">
+                                <input id="descpt" type="text">
                             </div>
                             <div class="data">
                                 <label>URL Of Drive:</label>
-                                <input type="text">
+                                <input id="url" type="text">
                             </div>
                             <div class="butn">
-                                <div class="inner"></div>
-                                <button type="submit">Suggest</button>
-                            </div>
+                                <div class="inner"></div>                                
+                                <input type="submit" value="submit" class="sub" id="submit">
+                        </div>
                         </form>
                 </div>
             </div>
-
-            <div class="mapncalendar">
-                <ion-icon class="icon" name="map-outline"></ion-icon>
-                <a class="map" href="#"><i class="fi-map"></i> Map</a>
-                <ion-icon class="icon" name="calendar-outline"></ion-icon>
-                <a class="calendar" href="#"><i class="fi-calendar"></i> Calendar</a>
-            </div>
         </div>
-
-
         <div class="details">
             <div class="recentDrives">
                 <div class="cardHeader">
@@ -144,6 +134,7 @@
                 <table>
                     <thead>
                     <tr>
+                        <td>Sno</td>
                         <td>Name</td>
                         <td>Date</td>
                         <td>Time</td>
@@ -166,6 +157,23 @@
 
 
     <script type="module">
+
+        document.getElementById("submit").addEventListener('click', function(e){
+            e.preventDefault();
+            set(ref(db, 'user/' + document.getElementById("name").value),
+            {
+    
+                Name: document.getElementById("name").value,
+                Date: document.getElementById("date").value,
+                Time: document.getElementById("time").value,
+                Address: document.getElementById("address").value,
+                Description: document.getElementById("descpt").value,
+                Url: document.getElementById("url").value,
+    
+            });
+              alert("Request Sent!");
+            });
+
         // fill table function to add one record to the table
         var stdNo = 0;
         var tbody = document.getElementById('tbody1')
@@ -211,7 +219,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
 
         // Your web app's Firebase configuration
-        const firebaseConfig = {
+        const firebaseConfig1 = {
             apiKey: "AIzaSyDHZqASTuxcHdrxHQQVwUPjfKNWLxkbhkA",
             authDomain: "schoolsuppliesdrives.firebaseapp.com",
             databaseURL: "https://schoolsuppliesdrives-default-rtdb.firebaseio.com",
@@ -222,17 +230,13 @@
         };
 
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
+        const app1 = initializeApp(firebaseConfig1);
         import{ getDatabase, ref, child, onValue, get }
-            from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js"
+            from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
 
-            // firebase.initializeApp(firebaseConfig);
-            // const db = firebase.database();
 
         const db = getDatabase();
-
         //--get all data--\\
-
         function GetAllDataOnce() {
             const dbRef = ref(db);
 
@@ -246,7 +250,6 @@
                     AddAllItemsToTable(drives);
                 });
         }
-
     //--get realdata--\\
         function GetAllDataRealtime() {
             const dbRef = ref(db, "DrivesNames");
@@ -261,7 +264,6 @@
 
             })
         }
-
         window.onload = GetAllDataRealtime;
     </script>
     <script src="navLinksmove.js"></script>

@@ -49,7 +49,7 @@ nav{
     top: 0;
     left: 0;
     height: 100%;
-    width: 260px;
+    width: 250px;
     background-color: var(--nav-color);
     padding: 10px 0 10px 10px;
     transition: .3s ease;
@@ -115,10 +115,10 @@ nav .menu-items li a ion-icon{
 }
 nav.close .menu-items li a ion-icon{
     padding-left: 12px;
-    font-size: 44px;
+    font-size: 34px;
 }
 nav .menu-items li a .links {
-    font-size: 25px;
+    font-size: 18px;
     color: var(--white);
     transition: .3s ease;
 }
@@ -214,7 +214,7 @@ body.dark .switch::before {
     display: flex;
     flex-direction: column;
     padding: 2rem 3%;
-    margin-left: 12%;
+    margin-left: 13%;
     background-color: var(--softPurple);
     z-index: 1;
 }

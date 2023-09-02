@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X--UA-Compatible"  content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="teachrequestss.css">
+    <title>Teacher Requests</title>
+</head>
+<body>
+
+
+    <nav>
+        <div class="logo">
+            <div class="logo-image">
+                <img src="https://bit.ly/3E2uE5q" alt="">
+            </div>
+            
+            <div class="logo-name">
+                B-T-S
+            </div>
+        </div>
+        <div class="menu-items">
+            <ul class="navLinks">
+                <li class="navList">
+                    <a href="http://127.0.0.1:5500/Donor-Page/donor.html">
+                        <ion-icon class="ion-icon" name="home-outline"></ion-icon>
+                        <span class="links">Drives</span>
+                    </a>
+                </li>
+
+                <li class="navList">
+                    <a href="http://127.0.0.1:5500/Teachers-Page/Supplies-Page/suppliies.html">
+                        <ion-icon name="school-outline"></ion-icon>
+                        <span class="links">Teachers Discounts</span>
+                    </a>
+                </li>
+
+                <li class="navList">
+                    <a id="movy">
+                        <ion-icon name="albums-outline"></ion-icon>
+                        <span class="links">Teachers Requests</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="bottom-link">
+                <li>
+                    <a target="_blank" href="/First-Page/website.html">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span class="links">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav> 
+
+
+<div class="main">
+
+
+    <div id="teachrequst" class="teachrequst">
+        <div class="main-head">
+            <h1><span>Teachers Requests</span></h1>
+            <div class="list">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Sno</td>
+                            <td>Requested School Supplies</td>
+                            <td>Contact Details</td>
+                        </tr>
+                    </thead>
+    
+                    <tbody class="tbody2" id="tbody2"></tbody>
+                </table>  
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+<script type="module">
+    // fill table function to add one record to the table
+    var stdNo = 0;
+    var tbody = document.getElementById('tbody2')
+    function AddItemToTable(email, SchoolSupply) {
+        let trow = document.createElement('tr');
+        let td1 = document.createElement('td');
+        let td2 = document.createElement('td');
+        let td3 = document.createElement('td');
+
+
+        td1.innerHTML = ++stdNo;
+        td2.innerHTML = SchoolSupply;
+        td3.innerHTML = email;
+        
+
+
+        trow.appendChild(td1);
+        trow.appendChild(td2);
+        trow.appendChild(td3);
+
+        tbody.appendChild(trow);
+    }
+
+    function AddAllItemsToTable(user) {
+        stdNo = 0;
+        tbody.innerHTML = "";
+        user.forEach(element => {
+            AddItemToTable(element.email, element.SchoolSupply);
+        });
+    }
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCJSnXH_rAnyWvHJZj8pHtAiCPPckWzmxw",
+        authDomain: "teachreaquests.firebaseapp.com",
+        databaseURL: "https://teachreaquests-default-rtdb.firebaseio.com",
+        projectId: "teachreaquests",
+        storageBucket: "teachreaquests.appspot.com",
+        messagingSenderId: "1072549923271",
+        appId: "1:1072549923271:web:aa92ac81ab283e6ae031e2",
+        measurementId: "G-7MPY87JWZP"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    import{ getDatabase, ref, child, onValue, get }
+        from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js"
+
+        // firebase.initializeApp(firebaseConfig);
+        // const db = firebase.database();
+
+    const db = getDatabase();
+
+    //--get all data--\\
+
+    function GetAllDataOnce() {
+        const dbRef = ref(db);
+
+        get(child(dbRef, "user"))
+            .then((snapshot) => {
+                var drives = [];
+
+                snapshot.forEach(childSnapShot => {
+                    drives.push(childSnapShot.val());
+                });
+                AddAllItemsToTable(drives);
+            });
+    }
+
+//--get realdata--\\
+    function GetAllDataRealtime() {
+        const dbRef = ref(db, "user");
+
+        onValue(dbRef, (snapshot) => {
+            var drives = [];
+
+             snapshot.forEach(childSnapShot => {
+                drives.push(childSnapShot.val());
+             });
+            AddAllItemsToTable(drives);
+
+        })
+    }
+
+    window.onload = GetAllDataRealtime;
+</script>
+
+
+
+
+
+
+
+
+    <script src="navLinksmove.js"></script>
+    <script src="navmove.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+

@@ -49,7 +49,7 @@ nav{
     top: 0;
     left: 0;
     height: 100%;
-    width: 260px;
+    width: 250px;
     background-color: var(--nav-color);
     padding: 10px 0 10px 10px;
     transition: .3s ease;
@@ -115,10 +115,10 @@ nav .menu-items li a ion-icon{
 }
 nav.close .menu-items li a ion-icon{
     padding-left: 12px;
-    font-size: 44px;
+    font-size: 34px;
 }
 nav .menu-items li a .links {
-    font-size: 25px;
+    font-size: 18px;
     color: var(--white);
     transition: .3s ease;
 }
@@ -216,7 +216,7 @@ body.dark .switch::before {
     flex-direction: column;
     padding: 2rem 3%;
     margin-left: 13%;
-    background-color: var(--softPurple);
+    background: linear-gradient( white, #c3ebf2, white);
     z-index: 1;
 }
 .main-header{
@@ -237,7 +237,7 @@ body.dark .switch::before {
     height: 50px;
     display: flex;
     justify-content: space-between;
-    border: none;
+    border: 1.5px solid black;
     background: none;
     border-radius: 90px;
     padding: .5rem 1rem;
@@ -259,7 +259,7 @@ body.dark .switch::before {
     top: 0;
     height: 100%;
     padding: 0 5%;
-    border: none;
+    border-right: 1px solid black;
     background-color: var(--primary-color);
     color: var(--whiteColor);
     font-size: 30px;
@@ -335,7 +335,7 @@ form .data input{
     width: 100%;
     margin-top: 4px;
     padding-left: 10px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     font-size: 20px;
     border: 1px solid silver;
 }
@@ -364,7 +364,7 @@ form .butn .inner{
 form .butn:hover .inner{
     left: 0;
 }
-form .butn button{
+form .butn input{
     height: 100%;
     width: 100%;
     background: none;
@@ -375,6 +375,7 @@ form .butn button{
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
+    background: red; 
 } 
 .pplsugg .close-btn{
     position: absolute;

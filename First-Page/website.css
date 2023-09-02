@@ -444,7 +444,6 @@ nav ul li a {
     transition: .3s ease;
 
 }
-
 .popup .close-btn {
     cursor: pointer;
     position: absolute;
@@ -460,19 +459,13 @@ nav ul li a {
     text-align: center;
     border-radius: 50%;
 }
-
 .popup.active .overlay {
     display: block;
 }
-
 .popup.active .content {
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
 }
-
-
-
-
 
 
 
@@ -510,6 +503,176 @@ nav ul li a {
         text-align: center;
     }
 }
+
+/* About Page */
+
+.section{
+    width: 100%;
+    min-height: 60vh;
+    margin: 40px auto;
+    background: linear-gradient(180deg, rgba(23.59, 69.03, 157.25, 0.78) 18%, rgba(23.96, 174.25, 147.20, 0.67) 100%);
+}
+.contaner{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+.content-section{
+    float: left;
+    width: 55%;
+}
+.image-section{
+    float: right;
+    width: 40%;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+.content-section .title{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.content-section .content h3{
+    margin-top: 20px;
+    color: #5d5d5d;
+    font-size: 21px;
+}
+.content-section .content p{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.content-section .content .button {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.content-section .content .button a{
+    background-color: #3d3d3d;
+    padding: 22px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+    background-color: #a52a2a;
+    color: #fff;
+}
+.content-section .social{
+    margin: 40px 40px;
+}
+.content-section .social i {
+    color: #a52a2a;
+    font-size: 30px;
+    padding: 0 10px;
+}
+.content-section .social i:hover{
+    color: #3d3d3d;
+}
+
+@media screen and (max-width: 768px){
+    .contaner{
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-top: 50px;
+    }
+    .content-section{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .image-section{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .content-section .title{
+        text-align: center;
+        font-size: 19px;
+    }
+    .content-section .content .button {
+        text-align: center;
+    }
+    .content-section .content .button a{
+        padding: 9px 30px;
+    }
+    .content-section .social{
+        text-align: center;
+    }
+
+}
+
+
+/* Contact Page */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

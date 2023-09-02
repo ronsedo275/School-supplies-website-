@@ -10,7 +10,6 @@
 </head>
 <body>
 
-
 <div class="container">
     <header class="header">
         <nav class="navbar">
@@ -80,7 +79,7 @@
 
                 <input type="text" class="input-field" id="school" placeholder="School or Organization" >
                 <input type="checkbox" class="check-box"><span>I agree to the terms & conditions.</span>
-                <button type="submit" class="submit-btn"><a target="_blank" href="http://127.0.0.1:5500/Teachers-Page/teachers.html">Register</a></button>
+                <button type="submit" id="submit" class="submit-btn"><a target="_blank" href="http://127.0.0.1:5500/Teachers-Page/teachers.html">Register</a></button>
                 <span class="span">Already have an account? <a class="a" target="_blank" href="">Login</a></span>
             </form>
 
@@ -89,7 +88,7 @@
                 <input type="email" class="input-field" id="email" placeholder="Email Address" >
                 <input type="password" class="input-field" id="password" placeholder="Enter Password" >
                 <input type="checkbox" class="check-box"><span>I agree to the terms & conditions.</span>
-                <button type="submit" class="submit-btn"><a target="_blank" href="/public/Parent-Page/parent.html">Register</a></button>
+                <button type="submit" id="submit" class="submit-btn"><a target="_blank" href="/public/Parent-Page/parent.html">Register</a></button>
                 <span class="span" >Already have an account? <a class="a" href="">Login</a></span>
             </form>
 
@@ -99,7 +98,7 @@
                 <input type="password" class="input-field" id="password" placeholder="Enter Password" required>
                 <input type="text" class="input-field" id="school" placeholder="Name of Organization" required>
                 <input type="checkbox" class="check-box"><span>I agree to the tearms & conditions.</span>
-                <button type="submit" class="submit-btn"><a target="_blank" href="/Donor-Page/donor.html">Register</a></button>
+                <button type="submit" id="submit" class="submit-btn"><a target="_blank" href="/Donor-Page/donor.html">Register</a></button>
                 <span class="span">Already have an account? <a class="a" href="">Login</a></span>
             </form>
 
@@ -149,8 +148,8 @@
 
     <div class="vid-list-con">
         <div class="list active">
-            <iframe class="main-video" width="400" height="200" src="https://www.youtube.com/embed/JdqL89ZZwFw" title="Video Placement" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <h3 class="list-title">School Suppleis is like buing Furnuter. Expensive!" - Random Teacher</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ALWp1eCzPQw?si=by1A-IohxluqKKpr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="list-title">School Supplies That Teachers Love vs. Hate</h3>
         </div>
 
         <div class="list">
@@ -198,7 +197,7 @@
 </div>
 
 <div id="about" class="section">
-    <div class="container">
+    <div class="contaner">
         <div class="content-section">
             <div class="title">
                 <h1>About Our Project</h1>
@@ -214,15 +213,27 @@
                 </div>
             </div>
             <div class="social">
-                <a href=""><img src="https://bit.ly/3OUZtit" alt=""></a>
-                <a href=""><img src="https://bit.ly/45tmajq" alt="tiktok"></a>
-                <a href=""><img src="https://bit.ly/456gU5j" alt="snap"></a>
+                <a><img src="https://bit.ly/3OUZtit"></a>
+                <a><img src="https://bit.ly/45tmajq"></a>
+                <a><img src="https://bit.ly/456gU5j"></a>
             </div>
         </div>
         <div class="image-section">
-            <img src="" alt="">
+            <img src="https://bit.ly/3Z31f4z" alt="">
+            <!-- <img src="https://bit.ly/44ysVPR" alt=""> -->
         </div>
     </div>
+</div>
+
+<div class="heo">
+
+    <form>
+        <div class="input-group">
+            <input type="text" required>
+            <label for="">Your Name</label>
+        </div>
+    </form>
+
 </div>
 
 
@@ -230,9 +241,35 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- <script src="firebase.js"></script> -->
-    <script src="firebase-config.json"></script>
+ 
     <script src="popup.js"></script>
     <script src="firbase.js"></script>
     <script src="loginmenu.js"></script>

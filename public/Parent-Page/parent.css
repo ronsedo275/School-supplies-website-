@@ -411,7 +411,7 @@ form .butn .inner{
 form .butn:hover .inner{
     left: 0;
 }
-form .butn button{
+form .butn .sub{
     height: 100%;
     width: 100%;
     background: none;
@@ -443,6 +443,9 @@ form .butn button{
 
 
 
+.maps{
+    display: none;
+}
 .mapncalendar .map,
 .mapncalendar .calendar {
     text-decoration: none;
@@ -451,7 +454,7 @@ form .butn button{
 }
 .details {
     position: relative;
-    width: 170%;
+    width: 270%;
     padding: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -487,6 +490,9 @@ form .butn button{
     border-radius: 6px;
     font-size: 23px;
 }
+
+
+
 .details table {
     width: 100%;
     border-collapse: collapse;
@@ -496,11 +502,19 @@ form .butn button{
     font-weight: 600;
 }
 .details .recentDrives table tr,
-.details .recentDrives table .names
- {
+.details .recentDrives table .names {
     font-size: 20px;
+    text-align: start;
     color: var(--text-color);
     border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    transition: .4s ease;
+}
+.details .recentDrives table tbody tr:hover{
+    transform: scale(1.05);
+    z-index: 100;
+    background: #25bcff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+    color: #fff;
 }
 .details .recentDrives table tr:last-child,
 .details .recentDrives table .names:last-child {
@@ -508,7 +522,7 @@ form .butn button{
 }
 .details .recentDrives table tbody tr:hover,
 .details .recentDrives table tbody .names:hover {
-    background: #5c9ee9;
+    background: #25bcff;
     color: var(--white);
     cursor: pointer;
 }
@@ -516,12 +530,20 @@ form .butn button{
 .details .recentDrives table .names td {
     padding: 12px;
 }
-.details .recentDrives table tr td:nth-child(2),
-.details .recentDrives table .names td:nth-child(2){
-    text-align: end;
+.details .recentDrives table tr td:nth-child(2) {
+    /* text-align: end; */
+    min-width: 2px;
 }
-.details .recentDrives table tr td:nth-child(3),
+.details .recentDrives table .names td:nth-child(2){
+    text-align: start;
+}
 .details .recentDrives table .names td:nth-child(3){
     text-align: end;
-    text-align: center;
+    /* text-align: center; */
+}
+.details .recentDrives table tr td:nth-child(3) {
+    width: 160px;
+}
+.details .recentDrives table tr td:nth-child(4) {
+    width: 130px;
 }
